@@ -36,7 +36,7 @@ const Carousel = () => {
   const items = CarouselData.map((item) => (
     <img
       key={item.image}
-      className="w-full md:h-[620px] lg:h-[720px] object-cover rounded-lg cursor-pointer"
+      className="w-full md:h-[620px] lg:h-[720px] object-cover  cursor-pointer"
       role="presentation"
       src={item.image}
       alt="carousel-item"
@@ -44,8 +44,11 @@ const Carousel = () => {
   ));
 
   return (
-    <div className="w-full overflow-hidden">
-      <AliceCarousel 
+      <div className="w-full overflow-hidden">
+          
+
+          
+      <AliceCarousel  
         items={items}
         disableButtonsControls
         autoPlay
