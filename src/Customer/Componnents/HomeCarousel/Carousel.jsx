@@ -7,7 +7,7 @@ const Carousel = () => {
   const items = CarouselData.map((item) => (
     <img
       key={item.image}
-      className="w-full md:h-[620px] lg:h-[720px] object-cover  cursor-pointer"
+      className="w-full md:h-[620px] lg:h-[720px] object-cover  cursor-pointer -z-10"
       role="presentation"
       src={item.image}
       alt="carousel-item"
