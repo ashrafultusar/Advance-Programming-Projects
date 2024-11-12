@@ -1,32 +1,3 @@
-// import AliceCarousel from "react-alice-carousel";
-// import { CarouselData } from "./CarouselData";
-// import 'react-alice-carousel/lib/alice-carousel.css';
-
-
-// const Carousel = () => {
-//   const items = CarouselData.map((item) => (
-//     <img
-//       className="cursor-pointer"
-//       role="presentation"
-//       src={item.image}
-//       alt="img"
-//     ></img>
-//   ));
-
-//   return (
-//     <div>
-//           <AliceCarousel items={items}
-//               disableButtonsControls
-//               autoPlay
-//               autoPlayInterval={2000}
-//               infinite
-//           />
-          
-//     </div>
-//   );
-// };
-
-// export default Carousel;
 
 import AliceCarousel from "react-alice-carousel"; 
 import { CarouselData } from "./CarouselData";
