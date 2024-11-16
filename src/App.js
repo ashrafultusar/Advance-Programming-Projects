@@ -2,13 +2,15 @@ import "./App.css";
 import Navbar from "./Customer/Componnents/Navigations/Navbar";
 import HomePage from "./Customer/Pages/HomePage/HomePage";
 import Footer from "./Customer/Componnents/Footer/Footer";
+import Product from "./Customer/Componnents/Product/Product";
 
 function App() {
   return (
     <div className="">
       <Navbar></Navbar>
-      <div>
-        <HomePage></HomePage>
+      <div className="">
+        {/* <HomePage></HomePage> */}
+        <Product></Product>
       </div>
       <Footer></Footer>
     </div>
