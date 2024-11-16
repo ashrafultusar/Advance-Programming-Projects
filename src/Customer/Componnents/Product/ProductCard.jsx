@@ -1,3 +1,5 @@
+import './ProductCard.css'
+
 const ProductCard = () => {
   return (
     <div className="productCard w-[15rem] m-3 transition-all cursor-pointer">
