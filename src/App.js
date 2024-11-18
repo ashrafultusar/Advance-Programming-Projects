@@ -5,6 +5,7 @@ import Footer from "./Customer/Componnents/Footer/Footer";
 import Product from "./Customer/Componnents/Product/Product";
 import ProductDetails from "./Customer/Componnents/ProductDetails/ProductDetails";
 import Cart from "./Customer/Componnents/Cart/Cart";
+import Checkout from "./Customer/Componnents/Checkout/Checkout";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         {/* <HomePage></HomePage> */}
         {/* <Product></Product> */}
         {/* <ProductDetails></ProductDetails> */}
-<Cart></Cart>
+        {/* <Cart></Cart> */}
+        <Checkout></Checkout>
       </div>
       <Footer></Footer>
     </div>
