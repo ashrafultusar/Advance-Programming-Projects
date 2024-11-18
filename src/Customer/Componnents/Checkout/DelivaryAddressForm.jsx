@@ -3,6 +3,23 @@ import AdressCard from "../AdressCard/AdressCard";
 import { Box, Button, Grid2, TextField } from "@mui/material";
 
 const DelivaryAddressForm = () => {
+  const handelSubmit = (e) => {
+    e.preventDefault();
+      const data = new FormData(e.currentTarget);
+      
+      const address = {
+          firstName:data.get("firstName"),
+          lastName:data.get("lasttName"),
+          address:data.get("address"),
+          city:data.get("city"),
+          state:data.get("state"),
+          zip:data.get("zip"),
+          phoneNumber:data.get("phoneNumber"),
+      }
+
+    console.log(address);
+  };
+
   return (
     <div>
       <Grid2 container spacing={4}>
@@ -26,7 +43,7 @@ const DelivaryAddressForm = () => {
 
         <Grid2 item xs={12} lg={7}>
           <Box className="border rounded-s-md shadow-md p-5">
-            <form>
+            <form onSubmit={handelSubmit}>
               <Grid2 container spacing={3}>
                 <Grid2 item xs={12} sm={6}>
                   <TextField
@@ -61,7 +78,6 @@ const DelivaryAddressForm = () => {
                   rows={4}
                 />
               </Grid2>
-
               <Grid2 className="mt-2" item xs={12} sm={6}>
                 <TextField
                   required

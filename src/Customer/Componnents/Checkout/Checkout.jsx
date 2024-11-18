@@ -24,11 +24,11 @@ export default function Checkout() {
     }
   }, [location.search]); 
 
-  const handleNext = () => {
-    const nextStep = activeStep + 1;
-    setActiveStep(nextStep);
-    navigate(`?step=${nextStep}`); 
-  };
+  // const handleNext = () => {
+  //   const nextStep = activeStep + 1;
+  //   setActiveStep(nextStep);
+  //   navigate(`?step=${nextStep}`); 
+  // };
 
   const handleBack = () => {
     const prevStep = activeStep - 1;
@@ -71,7 +71,7 @@ export default function Checkout() {
         )}
       </Box>
 
-      <div>
+      <div className="mt-2">
         {activeStep === 1 ? (
           <DelivaryAddressForm />
         ) : (
