@@ -44,7 +44,7 @@
 // };
 
 // export default Order;
-import { Grid } from "@mui/material";
+import {  Grid2 } from "@mui/material";
 import OrderCard from "./OrderCard";
 
 const orderStatus = [
@@ -57,9 +57,9 @@ const orderStatus = [
 const Order = () => {
   return (
     <div className="px-5 lg:px-20">
-      <Grid container spacing={2}>
+      <Grid2 container spacing={2}>
         {/* Filter Section: 1/3 of the screen */}
-        <Grid item xs={12} md={4}>
+        <Grid2 item xs={12} md={4}>
           <div className="h-auto shadow-lg bg-white p-5 sticky top-5">
             <h1 className="font-bold text-lg">Filter</h1>
             <div className="space-y-4 mt-10">
@@ -83,17 +83,17 @@ const Order = () => {
               ))}
             </div>
           </div>
-        </Grid>
+        </Grid2>
 
         {/* Cards Section: 2/3 of the screen */}
-        <Grid item xs={12} md={8}>
+        <Grid2 item xs={12} md={8}>
           <div className="space-y-4">
             {[1, 2, 3, 4].map((item, index) => (
               <OrderCard key={index} />
             ))}
           </div>
-        </Grid>
-      </Grid>
+        </Grid2>
+      </Grid2>
     </div>
   );
 };
