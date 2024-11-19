@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Radio, RadioGroup } from "@headlessui/react";
-import { Box, Grid, Grid2, LinearProgress, Rating } from "@mui/material";
+import { Rating } from "@mui/material";
 import ProductReviewCard from "./ProductReviewCard";
 import { mens_kurta } from "../../../Data/MensKurta";
 import HomeSectionCard from "../HomeSectionCard/HomeSectionCard";
