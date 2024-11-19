@@ -22,18 +22,18 @@ export default function Checkout() {
     if (!isNaN(step) && step >= 0 && step < steps.length) {
       setActiveStep(step); // Update activeStep based on URL step
     }
-  }, [location.search]); 
+  }, [location.search]);
 
   // const handleNext = () => {
   //   const nextStep = activeStep + 1;
   //   setActiveStep(nextStep);
-  //   navigate(`?step=${nextStep}`); 
+  //   navigate(`?step=${nextStep}`);
   // };
 
   const handleBack = () => {
     const prevStep = activeStep - 1;
     setActiveStep(prevStep);
-    navigate(`?step=${prevStep}`); 
+    navigate(`?step=${prevStep}`);
   };
 
   return (
@@ -54,9 +54,7 @@ export default function Checkout() {
           </React.Fragment>
         ) : (
           <React.Fragment>
-            <Typography sx={{ mt: 2, mb: 1 }}>
-              Step {activeStep + 1}
-            </Typography>
+            <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
             <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
               <Button
                 color="inherit"
@@ -72,11 +70,7 @@ export default function Checkout() {
       </Box>
 
       <div className="mt-2">
-        {activeStep === 1 ? (
-          <DelivaryAddressForm />
-        ) : (
-          <OrderSummery />
-        )}
+        {activeStep === 1 ? <DelivaryAddressForm /> : <OrderSummery />}
       </div>
     </div>
   );

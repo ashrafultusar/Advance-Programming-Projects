@@ -1,13 +1,21 @@
 import { Divider } from "@mui/material";
 import CartItem from "./CartItem";
 import { Button } from "@headlessui/react";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
+  const navigate = useNavigate()
+  const handelCheckout = () => {
+    navigate("/checkout?step=1")
+  }
+
   return (
     <div>
       <div className="lg:grid grid-cols-3 lg:px-16 relative">
         <div className="col-span-2">
-         {[1,1,1,1].map((item)=><CartItem></CartItem>) }
+          {[1, 1, 1, 1].map((item) => (
+            <CartItem></CartItem>
+          ))}
         </div>
         <div className="px-5 sticky top-0 h-[100vh] mt-5 lg:mt-0">
           <div className="border px-3">
@@ -32,12 +40,11 @@ const Cart = () => {
                 <span>Total Amount</span>
                 <span>$667</span>
               </div>
-                      </div>
-                      
-                      <Button className="bg-[#9155fd] px-3 py-2 rounded-md w-full mt-6 mb-2">
-                  Add To Cart
-                </Button>
+            </div>
 
+            <Button onClick={handelCheckout} className="bg-[#9155fd] text-white px-3 py-2 rounded-md w-full mt-6 mb-2">
+              CheckOut
+            </Button>
           </div>
         </div>
       </div>

@@ -11,6 +11,7 @@ import { Avatar, Button, Menu, MenuItem } from "@mui/material";
 
 import { deepPurple } from "@mui/material/colors";
 import { navigation } from "./navigationData";
+import { useNavigate } from "react-router-dom";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -18,7 +19,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-
+const navigate=useNavigate()
   const [openAuthModal, setOpenAuthModal] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const openUserMenu = Boolean(anchorEl);
@@ -39,7 +40,7 @@ export default function Navbar() {
   };
 
   const handleCategoryClick = (category, section, item, close) => {
-    // navigate(`/${category.id}/${section.id}/${item.id}`);
+    navigate(`/${category.id}/${section.id}/${item.id}`);
     close();
   };
 
@@ -406,17 +407,16 @@ export default function Navbar() {
                           "aria-labelledby": "basic-button",
                         }}
                       >
-                        <MenuItem >My Order</MenuItem>
+                        <MenuItem onClick={()=>navigate('/account/order')}>My Order</MenuItem>
                         <MenuItem
-                          // onClick={handleLogout}
-                        >Logout</MenuItem>
+                        // onClick={handleLogout}
+                        >
+                          Logout
+                        </MenuItem>
                       </Menu>
                     </div>
                   ) : (
-                    <Button
-                     
-                      className="text-sm font-medium text-gray-700 hover:text-gray-800"
-                    >
+                    <Button className="text-sm font-medium text-gray-700 hover:text-gray-800">
                       Signin
                     </Button>
                   )}
@@ -439,15 +439,13 @@ export default function Navbar() {
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <Button
-                    className="group -m-2 flex items-center p-2"
-                  >
+                  <Button className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                       aria-hidden="true"
                     />
                     <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
-                     4
+                      4
                     </span>
                     <span className="sr-only">items in cart, view bag</span>
                   </Button>
